@@ -22,7 +22,7 @@ VMware Tanzu Build Service (TBS) - Hands-On-Labs
 ## Prerequisites
 - 쿠버네티스 클러스터 v1.19 이상
 - 모든 워커 노드에 50GB 이상의 임시 볼륨(ephemeral storage) 할당
-- Carvel Imgpkg v0.12.0 이상
+- Carvel kapp, ytt (v0.35.0 이상), kbld, imgpkg (v0.12.0 이상)
 - Tanzu CLI : Tanzu Network에서 다운로드 가능하며, Secret과 Package plugin 필요
 - Carvel kapp controller, secret gen controller
 - kp CLI v0.5 이상 (https://network.tanzu.vmware.com/products/build-service/)

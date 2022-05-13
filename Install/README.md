@@ -41,7 +41,7 @@ imgpkg copy -b registry.tanzu.vmware.com/build-service/package-repo:$TBS_VERSION
 
 (예시)
 ```
-imgpkg copy -b registry.tanzu.vmware.com/build-service/package-repo:1.5.1 --to-repo=index.docker.io/bnewkk/tbs
+imgpkg copy -b registry.tanzu.vmware.com/build-service/package-repo:1.5.1 --to-repo=index.docker.io/{Username}/tbs
 ```
 
 <br/>
@@ -134,7 +134,7 @@ tbs-values.yml 파일을 저장합니다.
 <br/>
 
 **7) 패키지 설치**
-<br/>최종적으로 패키지를 설치합니다.
+<br/>위에서 생성한 yml 파일을 통해 패키지를 설치합니다.
 ```
 tanzu package install tbs -p buildservice.tanzu.vmware.com -v $TBS_VERSION -n tbs-install -f tbs-values.yml --poll-timeout 30m
 ```
@@ -142,9 +142,54 @@ tanzu package install tbs -p buildservice.tanzu.vmware.com -v $TBS_VERSION -n tb
 설치가 완료되면 다음과 같이 확인이 가능합니다. <br/>
 ![](../Images/reconcile.png)
 
-본 실습을 성공적으로 마치셨습니다.
 
+**8) Tanzu Build Service 설치**
+<br/> 최종적으로 Tanzu Build Service를 설치합니다. descriptor name에는 위에서 사용했던 full/lite 를 적용합니다.
+```
+ytt -f /tmp/bundle/config/ \
+	-f /tmp/ca.crt \
+	-v kp_default_repository='my.registry.io/tbs' \
+	-v kp_default_repository_username='my-user' \
+	-v kp_default_repository_password='my-password' \
+	--data-value-yaml pull_from_kp_default_repo=true \
+	-v tanzunet_username='tanzunet-username' \
+	-v tanzunet_password='tanzunet-password' \
+	-v descriptor_name='lite' \
+	--data-value-yaml enable_automatic_dependency_updates=true \
+	| kbld -f /tmp/bundle/.imgpkg/images.yml -f- \
+	| kapp deploy -a tanzu-build-service -f- -y
+```
+프라이빗 레지스트리가 아닌 docker hub 사용 시 -f /tmp/ca.crt 를 제외하고 실행합니다. <br/>
+docker hub 예시는 다음과 같습니다.
+
+```
+ytt -f /tmp/bundle/config/ \
+	-v kp_default_repository='index.docker.io/{username}/tbs' \
+	-v kp_default_repository_username='{username}' \
+	-v kp_default_repository_password='{userpassword]' \
+	--data-value-yaml pull_from_kp_default_repo=true \
+	-v tanzunet_username='{tanzunet-username}' \
+	-v tanzunet_password='{tanzunet-password}' \
+	-v descriptor_name='lite' \
+	--data-value-yaml enable_automatic_dependency_updates=true \
+	| kbld -f /tmp/bundle/.imgpkg/images.yml -f- \
+	| kapp deploy -a tanzu-build-service -f- -y
+```
+
+**9) 설치 최종 확인**
+<br/>다음 커맨드를 입력합니다.
+```
+kp clusterbuilder list
+```
+설치가 성공적으로 이루어지면 다음과 같은 화면을 확인할 수 있습니다. <br/>
+![](../Images/succeed.png)
+
+<br/>
+
+본 실습을 성공적으로 마치셨습니다.
 <br/><br/>
+
+
 
 # 2. Air-Gapped 환경에서 Tanzu Build Service 설치
 To Be Updated
