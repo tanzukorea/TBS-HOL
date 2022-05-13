@@ -73,7 +73,7 @@ tanzu package repository get tbs-repository --namespace tbs-install
 ```
 
 **5) kp secret 생성**
-레파지토리에 대한 kp 시크릿을 생성하는 과정입니다.
+<br/>레파지토리에 대한 kp 시크릿을 생성하는 과정입니다.
 ```
  kp secret create kp-default-repository-creds \
    --registry "${INSTALL_REGISTRY_HOSTNAME}" \
@@ -104,7 +104,7 @@ kp secret create kp-default-repository-creds --dockerhub ${INSTALL_REGISTRY_USER
     ca_cert_data: <CA_CERT_CONTENTS> (optional)
     ```
 - secret으로 파일 구성
-    보안 위험성이 있는 경우, id/password를 직접 yaml에 삽입하는 대신 secret을 사용합니다.
+    <br/>보안 위험성이 있는 경우, id/password를 직접 yaml에 삽입하는 대신 secret을 사용합니다.
     ```
     ---
     kp_default_repository: <INSTALL_REPOSITORY>
@@ -121,7 +121,7 @@ kp secret create kp-default-repository-creds --dockerhub ${INSTALL_REGISTRY_USER
     ```
 
 -  추가 설명
-    - DESCRIPTOR_NAME 옵션이 full일 경우, 모든 dependency를 포함 (production 환경). lite일 경우, 클러스터의 인터넷 접근이 필요함
+    - DESCRIPTOR_NAME : 옵션이 full일 경우, 모든 dependency를 포함 (production 환경). lite일 경우, 클러스터의 인터넷 접근이 필요
     - CA_CERT_CONTENTS : 레지스트리가 사설 인증서로 구성되었을 경우 필요. .PEM 파일이 필요합니다.
 
 -  기타 설치 옵션
@@ -131,15 +131,15 @@ kp secret create kp-default-repository-creds --dockerhub ${INSTALL_REGISTRY_USER
     ```
 
 tbs-values.yml 파일을 저장합니다.
-
+<br/>
 
 **7) 패키지 설치**
-최종적으로 패키지를 설치합니다.
+<br/>최종적으로 패키지를 설치합니다.
 ```
 tanzu package install tbs -p buildservice.tanzu.vmware.com -v $TBS_VERSION -n tbs-install -f tbs-values.yml --poll-timeout 30m
 ```
 
-설치가 완료되면 다음과 같이 확인이 가능합니다.
+설치가 완료되면 다음과 같이 확인이 가능합니다. <br/>
 ![](../Images/reconcile.png)
 
 본 실습을 성공적으로 마치셨습니다.
