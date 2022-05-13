@@ -5,7 +5,8 @@ VMware Tanzu Build Service (TBS) - Hands-On-Labs
 
 
 ## Introduction
-본 핸즈온 문서는 VMWare Tanzu Build Service 에 대한 전반적인 내용과 실습을 위한 가이드 문서입니다. 본 과정에서는 Tanzu Build Service의 제품에 대한 소개와 실습을 포함하고 있습니다.<br/>
+본 핸즈온 문서는 VMWare Tanzu Build Service 에 대한 전반적인 내용과 실습을 위한 가이드 문서입니다. <br/>
+본 과정에서는 Tanzu Build Service의 제품에 대한 소개와 실습을 포함하고 있습니다.<br/>
 본 문서는 Tanzu Build Service 1.5 버전 기준입니다.
 <br/>
 <br/>

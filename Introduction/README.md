@@ -1,13 +1,17 @@
 ## 1. Tanzu Build Service란?
 Tanzu Build Service는 Cloud Native Buildpack을 사용하는 Kubernetes 기반 자동화 컨테이너 빌드 및 관리 시스템입니다.  
 
+<br/>
+
 ## 2.Tanzu Build Service 구성 요소
 - Cloud Native Buildpack
     - 소스 코드를 OCI 호환 가능한 이미지로 변환합니다 
 - kpack
-    - k8s 기본 빌드 서비스로 함께 작동하는 Open source resource controllers 모음입니다.
+    - k8s 기본 빌드 서비스로 함께 작동하는 오픈소스 리소스 컨트롤러의 모음입니다.
     - 이미지를 빌드하고, dependency 변경시 이미지 Re-build를 예약합니다. 
-  
+
+<br/>
+
 ## 3. Tanzu Build Service 특징
 **1) 용이한 시작 및 확장**
 - TBS가 자동으로 소스코드를 분석하고, 언어를 가마지해 배포 가능한 container artifact를 빌드합니다.
