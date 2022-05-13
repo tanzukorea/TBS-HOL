@@ -13,7 +13,7 @@ Tanzu Build Service는 Cloud Native Buildpack을 사용하는 Kubernetes 기반 
 <br/>
 
 ## 3. Tanzu Build Service 특징
-**1) 용이한 시작 및 확장**
+**1) 쉬운 시작 및 확장**
 - TBS가 자동으로 소스코드를 분석하고, 언어를 가마지해 배포 가능한 container artifact를 빌드합니다.
 - 업데이트 : 코드 커밋, 런타임 종속성, 라이브러리 및 OS를 업데이트합니다.
 - 자동으로 컨테이너 이미지를 빌드합니다.
