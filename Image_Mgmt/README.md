@@ -1,5 +1,5 @@
 이번 Lab에서는 샘플 애플리케이션을 사용해 이미지를 Build 및 re-build 해 보겠습니다.  <br/>
-아래 예시에서는 Spring Boot 기반의 애플리케이션 및 레지스트리로 docker hub를 사용합니다. <br/><br/>
+예시에서는 Spring Boot 기반의 애플리케이션 및 레지스트리로 docker hub를 사용합니다. <br/><br/>
 
 ## 1. 이미지 build
 **1) Secret 생성** 
