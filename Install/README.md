@@ -1,3 +1,6 @@
+이번 Lab에서는 Tanzu Build Service를 설치해 보겠습니다. 시작 전, prerequisite을 확인해 주시기 바랍니다.
+<br/><br/>
+
 # 1. Tanzu Build Service 설치
 ## 1. 환경 변수 설정
 설치에 필요한 환경 변수를 정의합니다.
@@ -80,13 +83,6 @@ tanzu package repository get tbs-repository --namespace tbs-install
    --registry-user "${INSTALL_REGISTRY_USERNAME}" \
    --namespace tbs-install
 ```
-
-주의) docker hub에서 시크릿 생성에 문제가 있는 경우, 다음 커맨드를 사용합니다.
-```
-kp secret create kp-default-repository-creds --dockerhub ${INSTALL_REGISTRY_USERNAME}
-```
-이후 비밀번호를 입력합니다.
-
 
 **6) tbs-values.yml 파일 생성**
 
