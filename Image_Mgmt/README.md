@@ -7,8 +7,11 @@
 -> https://github.com/sample-accelerators/spring-petclinic
 
 ![](../Images/fork-01.png)
+<br/>
 오른쪽 상단의 fork를 클릭해 본인 repository로 복사합니다.
+<br/>
 ![](../Images/fork-02.png)
+
 
 ## 1. 이미지 build
 **1) Secret 생성** 
