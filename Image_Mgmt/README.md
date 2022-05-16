@@ -1,6 +1,13 @@
 이번 Lab에서는 샘플 애플리케이션을 사용해 이미지를 Build 및 re-build 해 보겠습니다.  <br/>
 예시에서는 Spring Boot 기반의 애플리케이션 및 레지스트리로 docker hub를 사용합니다. <br/><br/>
 
+## 0. 소스코드 준비
+이미지를 build하기 전, 본인의 git repository에 샘플 애플리케이션을 pull 받아오는 과정이 필요합니다. <br/>
+해당 랩에서 사용할 애플리케이션은 spring-petclinic 이라는 Spring Boot 기반의 애플리케이션으로, 다음 주소에서 확인할 수 있습니다 <br/>
+-> https://github.com/sample-accelerators/spring-petclinic
+
+오른쪽 상단의 fork를 클릭해 본인 repository로 복사합니다.
+
 ## 1. 이미지 build
 **1) Secret 생성** 
 <br/> 다음 커맨드로 계정에 대한 시크릿을 생성합니다.
