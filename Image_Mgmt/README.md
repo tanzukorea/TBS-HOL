@@ -57,7 +57,7 @@ docker run -p 8080:8080 index.docker.io/{Username}/spring-petclinic:latest
 ```
 <br/>
 http://localhost:8080/ 접근시 아래와 같은 화면을 확인합니다. <br/>
-![](../Images/petclinic-localhost.png)
+![](../Images/localhost.png)
 
 <br/>
 
