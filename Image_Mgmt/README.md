@@ -33,7 +33,7 @@ kp image create spring-petclinic --tag index.docker.io/$DH_USERNAME/spring-petcl
 <br/>
 
 **3) 이미지 생성 과정 조회**
-kp image list 입력해 생성한 이미지를 확인합니다. <br/>
+<br/>kp image list 입력해 생성한 이미지를 확인합니다. <br/>
 ![](../Images/petclinic-0.png)
 
 kp build logs spring-petclinic 을 입력해 이미지 빌드 로그를 조회합니다. <br/>
@@ -45,19 +45,19 @@ Completion 후 Build successful 메시지를 확인합니다.
 <br/>
 
 **4) Docker Hub에서 이미지 확인**
-Docker Hub에서 이미지를 확인합니다.
+<br/> Docker Hub에서 이미지를 확인합니다.
 ![](../Images/docker.png)
 
 <br/><br/>
 
 **5) docker run으로 이미지 실행**
-다음 커맨드를 실행해 build된 이미지가 잘 실행되는지 확인합니다.
+<br/> 다음 커맨드를 실행해 build된 이미지가 잘 실행되는지 확인합니다.
 ```
 docker run -p 8080:8080 index.docker.io/{Username}/spring-petclinic:latest
 ```
 <br/>
 http://localhost:8080/ 접근시 아래와 같은 화면을 확인합니다. <br/>
-<img width="1721" alt="image" src="https://user-images.githubusercontent.com/14763080/168533342-1d7d3469-4fca-4791-8b9b-4f0a8b3bb67f.png">
+![](../Images/localhost.png)
 
 <br/>
 
