@@ -3,18 +3,17 @@
 
 # 0. 시작 전  - 이미지 레지스트리란?
 이번 Lab에서 말하는 '이미지 레지스트리'란, Kubernetes, Container 기반 애플리케이션 개발을 위해 컨테이너 이미지를 저장하는 데 사용되는 레파지토리 입니다. <br/>
-대표적으로 사용하는 이미지 레지스트리에는 Harbor와 Docker Hub가 있습니다. <br/><br/>
+이미지 레지스트리에는 대표적으로 Harbor와 Docker Hub가 있습니다. <br/><br/>
 
-- Harbor
-<br/>
-    - Harbour는 정책 및 역할 기반 액세스 제어로 아티팩트를 보호하고, 이미지가 스캔되고 취약성이 없는지 확인하고, 이미지를 신뢰할 수 있는 것으로 서명하는 오픈 소스 레지스트리입니다.<br/>
-    - CNCF Graduated Project인 Harbor는 규정 준수, 성능 및 상호 운용성을 제공하여 Kubernetes 및 Docker와 같은 클라우드 네이티브 컴퓨팅 플랫폼에서 일관되고 안전하게 아티팩트를 관리하는 데 도움이 됩니다.<br/>
-    - 별도의 설치가 필요하며, 다음 링크에서 자세한 정보 확인이 가능합니다 (https://goharbor.io/) <br/>
-- Docker Hub
-<br/>
-    - Docker Hub는 Docker에서 운영하는 Docker 이미지 저장소 서비스입니다. <br/>
-    - 사용자는 이미지 저장 및 공유를 위해 무료 public repository에 엑세스하고나, private repository 구독을 사용할 수 있습니다 <br/>
-    - 서비스 사용을 위해서는 Docker Hub 계정이 필요합니다.
+**1) Harbor**
+- Harbour는 정책 및 역할 기반 액세스 제어로 아티팩트를 보호하고, 이미지가 스캔되고 취약성이 없는지 확인하고, 이미지를 신뢰할 수 있는 것으로 서명하는 오픈 소스 레지스트리입니다.<br/>
+- CNCF Graduated Project인 Harbor는 규정 준수, 성능 및 상호 운용성을 제공하여 Kubernetes 및 Docker와 같은 클라우드 네이티브 컴퓨팅 플랫폼에서 일관되고 안전하게 아티팩트를 관리하는 데 도움이 됩니다.<br/>
+- 별도의 설치가 필요하며, 다음 링크에서 자세한 정보 확인이 가능합니다 (https://goharbor.io/) <br/>
+
+**2) Docker Hub**
+- Docker Hub는 Docker에서 운영하는 Docker 이미지 저장소 서비스입니다. <br/>
+- 사용자는 이미지 저장 및 공유를 위해 무료 public repository에 엑세스하고나, private repository 구독을 사용할 수 있습니다 <br/>
+- 서비스 사용을 위해서는 Docker Hub 계정이 필요합니다.
 
 # 1. Tanzu Build Service 설치
 ## 1. 환경 변수 설정
