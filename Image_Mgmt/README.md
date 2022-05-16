@@ -2,8 +2,9 @@
 예시에서는 Spring Boot 기반의 애플리케이션 및 레지스트리로 docker hub를 사용합니다. <br/><br/>
 
 ## 0. 소스코드 준비
-이미지를 build하기 전, 본인의 git repository에 샘플 애플리케이션을 pull 받아오는 과정이 필요합니다. <br/>
-해당 랩에서 사용할 애플리케이션은 spring-petclinic 이라는 Spring Boot 기반의 애플리케이션으로, 다음 주소에서 확인할 수 있습니다 <br/>
+**1) Repository Fork 하기**
+<br/>이미지를 build하기 전, 본인의 git repository에 샘플 애플리케이션을 복사해 옵니다. <br/>
+해당 Lab에서 사용할 애플리케이션은 spring-petclinic 이라는 Spring Boot 기반의 애플리케이션으로, 다음 주소에서 확인할 수 있습니다 <br/>
 -> https://github.com/sample-accelerators/spring-petclinic
 
 ![](../Images/fork-01.png)
@@ -11,6 +12,12 @@
 오른쪽 상단의 fork를 클릭해 본인 repository로 복사합니다.
 <br/>
 ![](../Images/fork-02.png)
+
+**2) Repository Pull 받아오기**
+<br/> 로컬에 샘플 애플리케이션 소스코드를 받아옵니다. 터미널에서 다음을 입력합니다.
+```
+git clone https://github.com/{Git-Username}/spring-petclinic.git
+```
 
 
 ## 1. 이미지 build
@@ -48,22 +55,51 @@ Completion 후 Build successful 메시지를 확인합니다.
 <br/> Docker Hub에서 이미지를 확인합니다.
 ![](../Images/docker.png)
 
-<br/><br/>
+<br/>
 
 **5) docker run으로 이미지 실행**
 <br/> 다음 커맨드를 실행해 build된 이미지가 잘 실행되는지 확인합니다.
 ```
 docker run -p 8080:8080 index.docker.io/{Username}/spring-petclinic:latest
 ```
-<br/>
 http://localhost:8080/ 접근시 아래와 같은 화면을 확인합니다. <br/>
 <img width="1264" alt="image" src="https://user-images.githubusercontent.com/14763080/168533771-82fe9112-ce73-4a73-bc93-453fac635d3a.png">
 
 <br/>
 
 ## 2. 코드 수정 후 이미지 Re-build
-To Be Updated
+이번 실습에서는 소스코드를 수정 후, 이미지를 다시 build 해보겠습니다.
+
+**1) 코드 수정**
+<br/> 사용중인 에디터 혹은 vi를 사용해 코드를 다음과 편집합니다. 예시에서는 VS Code를 사용했습니다.
+<br/> spring-petclinic/src/main/resources/messages/messages.properties 을 확인합니다.
+![](../Images/modify-0.png)
+
+첫 번째 값은 현재 Welcome 이고, 이를 Welcome, TBS! 로 수정해 보겠습니다.
+![](../Images/modify-1.png)
+
+수정 후 코드를 저장합니다.
+
+**2) Git Push**
+<br/>수정한 코드를 add, commit, push 합니다. 커맨드는 아래와 같습니다.
+```
+git add . && git commit -m "Updated welcome message"
+git push -u origin main
+```
+![](../Images/git-modified.png)
+
+코드가 반영되었음을 Github에서 확인합니다.
+
+**3) 이미지 Re-build 관찰**
+<br/> 다음 커맨드를 통해 이미지가 다시 빌드되는 과정을 관찰합니다.
+```
+watch kp build list spring-petclinic
+```
+![](../Images/rebuilding-0.png)
+
+빌드가 완료되었음을 확인합니다.
 
 
 
+<br/><br/>
 본 실습을 성공적으로 마치셨습니다.
