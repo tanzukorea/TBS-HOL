@@ -12,7 +12,7 @@
 
 **2) Docker Hub**
 - Docker Hub는 Docker에서 운영하는 Docker 이미지 저장소 서비스입니다. <br/>
-- 사용자는 이미지 저장 및 공유를 위해 무료 public repository에 엑세스하고나, private repository 구독을 사용할 수 있습니다 <br/>
+- 사용자는 이미지 저장 및 공유를 위해 무료 public repository에 엑세스하거나, private repository 구독을 사용할 수 있습니다 <br/>
 - 서비스 사용을 위해서는 Docker Hub 계정이 필요합니다.
 
 # 1. Tanzu Build Service 설치
