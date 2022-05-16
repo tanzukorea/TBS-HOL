@@ -60,6 +60,7 @@ http://localhost:8080/ 접근시 아래와 같은 화면을 확인합니다. <br
 ![](../Images/petclinic-localhost.png)
 
 <br/>
+
 ## 2. 코드 수정 후 이미지 Re-build
 To Be Updated
 
