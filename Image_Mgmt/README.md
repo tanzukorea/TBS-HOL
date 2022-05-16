@@ -57,7 +57,7 @@ docker run -p 8080:8080 index.docker.io/{Username}/spring-petclinic:latest
 ```
 <br/>
 http://localhost:8080/ 접근시 아래와 같은 화면을 확인합니다. <br/>
-![](../Images/localhost.png)
+<img width="1721" alt="image" src="https://user-images.githubusercontent.com/14763080/168533342-1d7d3469-4fca-4791-8b9b-4f0a8b3bb67f.png">
 
 <br/>
 
