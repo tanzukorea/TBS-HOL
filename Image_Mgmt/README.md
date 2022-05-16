@@ -20,10 +20,9 @@ git clone https://github.com/{Git-Username}/spring-petclinic.git
 ```
 
 **주의 사항**
-해당 github 레파지토리는 maven 및 gradle 빌드를 위한 builder를 모두 보유하고 있습니다. <br/>
+<br/>해당 github 레파지토리는 maven 및 gradle 빌드를 위한 builder를 모두 보유하고 있습니다. <br/><br/>
 이번 Lab에서는 Maven build를 사용할 것이므로, 이미지 build 전 clone한 github 레파지토리에서 gradle 관련 설정 파일 삭제가 필요합니다. <br/>
-삭제할 항목은 다음과 같습니다 <br/>
-gradle/wrapper, build.gradle, gradlew, gradlew.bat, settings.gradle
+삭제할 항목은 다음과 같습니다 => gradle/wrapper, build.gradle, gradlew, gradlew.bat, settings.gradle
 <br/>
 
 ## 1. 이미지 build
