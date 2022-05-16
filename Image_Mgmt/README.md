@@ -97,8 +97,15 @@ watch kp build list spring-petclinic
 ```
 ![](../Images/rebuilding-0.png)
 
-빌드가 완료되었음을 확인합니다.
+빌드 Status가 Success로 바뀔 때까지 기다립니다. 
 
+**4) docker run으로 변경된 이미지 실행**
+<br/> 위에서 사용했던 커맨드를 통해 re-build된 이미지가 잘 실행되는지 확인합니다.
+```
+docker run -p 8080:8080 index.docker.io/{Username}/spring-petclinic:latest
+```
+http://localhost:8080/ 접근시 Welcome 메시지가 변경되었음을 확인합니다. <br/>
+![](../Images/final.png)
 
 
 <br/><br/>
