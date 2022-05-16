@@ -50,6 +50,15 @@ Docker Hub에서 이미지를 확인합니다.
 
 <br/><br/>
 
+**5) docker run으로 이미지 실행**
+다음 커맨드를 실행해 build된 이미지가 잘 실행되는지 확인합니다.
+```
+docker run -p 8080:8080 index.docker.io/{Username}/spring-petclinic:latest
+```
+<br/>
+http://localhost:8080/ 접근시 아래와 같은 화면을 확인합니다. <br/>
+![](../Images/petclinic-localhost.png)
+
 ## 2. 코드 수정 후 이미지 Re-build
 To Be Updated
 
