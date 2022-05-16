@@ -6,7 +6,9 @@
 해당 랩에서 사용할 애플리케이션은 spring-petclinic 이라는 Spring Boot 기반의 애플리케이션으로, 다음 주소에서 확인할 수 있습니다 <br/>
 -> https://github.com/sample-accelerators/spring-petclinic
 
+![](../Images/fork-01.png)
 오른쪽 상단의 fork를 클릭해 본인 repository로 복사합니다.
+![](../Images/fork-02.png)
 
 ## 1. 이미지 build
 **1) Secret 생성** 
