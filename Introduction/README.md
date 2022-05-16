@@ -1,4 +1,5 @@
 ## 1. Tanzu Build Service란?
+![](../Images/overview.png)
 Tanzu Build Service는 Cloud Native Buildpack을 사용하는 Kubernetes 기반 자동화 컨테이너 빌드 및 관리 시스템입니다.  
 
 <br/>
